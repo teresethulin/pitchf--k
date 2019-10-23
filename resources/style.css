@@ -2,3 +2,7 @@ img {
   width: 25vw;
   height: auto;
 }
+
+h2 {
+  text-transform: capitalize;
+}

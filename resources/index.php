@@ -1,17 +1,27 @@
 <?php
 
-// This is the file where you can keep your HTML markup. We should always try to
-// keep us much logic out of the HTML as possible. Put the PHP logic in the top
-// of the files containing HTML or even better; in another PHP file altogether.
+require __DIR__ . '/header.php';
+
+usort($articles, "sortArticlesByDate");
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title></title>
-    </head>
-    <body>
-    </body>
-</html>
+<h1>Pitchf**k</h1>
+<main>
+    <?php
+    foreach ($articles as $article) :
+        ?>
+        <article>
+            <img src="<?php echo $article['image']; ?>" alt="<?php echo $article['title']; ?>" />
+            <h2><?php echo $article['title']; ?></h2>
+            <p class="author">By: <?php echo $article['name']; ?></p>
+            <p class="date">Published: <?php echo $article['date']; ?></p>
+            <p><?php echo $article['content']; ?></p>
+        </article> <?php endforeach; ?>
+</main>
+
+
+<?php
+
+require __DIR__ . '/footer.php';
+
+?>

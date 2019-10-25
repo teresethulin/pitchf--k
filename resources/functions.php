@@ -15,3 +15,24 @@ function sortArticlesByDate(array $todaysDate, array $datePublished): int
 {
     return strtotime($datePublished['date']) - strtotime($todaysDate['date']);
 }
+
+
+// function getArticleByline() {
+
+// }
+
+// function getTitle() {
+
+// }
+
+// function getContent {
+
+// }
+
+// function getPublishedDate {
+
+// }
+
+// function getArticleImage {
+
+// }

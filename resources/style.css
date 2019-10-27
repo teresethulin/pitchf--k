@@ -1,8 +1,189 @@
+@font-face {
+  font-family: Tiempos Headline;
+  src: url(./fonts/TiemposHeadlineTest-Semibold.woff);
+}
+
+@font-face {
+  font-family: Walfork;
+  src: url(./fonts/Walfork-Demi.woff);
+}
+
+@font-face {
+  font-family: Walfork;
+  src: url(./fonts/Walfork-Regular.woff);
+}
+
+@font-face {
+  font-family: Tiempos Text;
+  src: url(./fonts/TiemposTextTest-Regular.woff);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Walfork";
+  width: 100vw;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.top {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  background-color: white;
+  width: 100vw;
+  height: 10vh;
+  padding: 4vh 0 3vh 8vw;
+}
+
+main {
+  margin-bottom: 10vh;
+}
+
+header {
+  background-color: black;
+  height: 10vh;
+  margin-top: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+article {
+  background-color: white;
+  width: 85vw;
+  margin: 4vh 0 3vh 0;
+  padding: 5%;
+  box-shadow: 5px 5px 15px whitesmoke;
+}
+
+.logo {
+  width: 30vw;
+  fill: white;
+}
+
 img {
-  width: 25vw;
+  display: block;
+  position: relative;
+  right: 5vw;
+  width: 85vw;
   height: auto;
+  padding: 4vh 0 3vh 0;
 }
 
 h2 {
   text-transform: capitalize;
+  font-family: "Tiempos Headline";
 }
+
+ul.byline {
+  list-style: none;
+  padding: 2vh 0 3vh 0;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.byline > li {
+  display: inline;
+}
+
+li.date {
+  color: #b3b3b3;
+}
+
+footer {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #eee;
+}
+
+ul.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  height: 3rem;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navbar > li {
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  padding-top: 2vh;
+  /* flex-direction: column; */
+}
+
+.navbar > li:nth-child(n + 2) {
+  border-left: 1px solid #eee;
+}
+
+.home,
+.share,
+.player,
+.search,
+.menu {
+  width: 5vw;
+}
+
+.content {
+  display: block;
+  font-family: "Tiempos Text";
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.88889;
+}
+
+.likes {
+  padding: 3vh 0 0 0;
+  font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 600px) {
+  header {
+    height: 20vh;
+    padding-top: 7vh;
+    background-color: white;
+  }
+
+  img {
+    width: 50vw;
+    height: auto;
+  }
+
+  .logo {
+    width: 15vw;
+    fill: black;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+  header {
+    height: 5vh;
+    padding-top: 5vh;
+  }
+
+  img {
+    width: 200px;
+    height: auto;
+  }
+} */

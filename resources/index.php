@@ -40,11 +40,14 @@ usort($articles, "sortArticlesByDate");
 </svg>
 
 </header>
-<section>
-    <div class="top">
-        <p>news</p>
-    </div>
-</section>
+    <nav>
+        <ul class="top">
+            <li>best of</li>
+            <li>the latest</li>
+            <li>reviews</li>
+            <li>features</li>
+        </ul>
+</nav>
 <main>
     <?php
     foreach ($articles as $article) :
@@ -52,17 +55,19 @@ usort($articles, "sortArticlesByDate");
         <section>
         <article>
             <h2><?php echo $article['title']; ?></h2>
+            <p class="introduction"><?php echo ($article['introduction']); ?></p>
             <img src="<?php echo $article['image']; ?>" alt="<?php echo $article['title']; ?>" />
             <ul class="byline"><li class="author">By: <?php echo $article['name']; ?></li>
             <li class="date">/ <?php echo $article['date']; ?></li></ul>
-            <div class="content"><p><?php echo $article['content']; ?></p>
-            <br><p><?php echo $article['content']; ?></p></div>
+            <div class="content">
+                <p><?php echo contentWithLineBreak($article['content']); ?></p>
+            </div>
             <div class="likes">&#128077; <?php echo $article['likes']; ?></div>
         </article>
         </section> <?php endforeach; ?>
 </main>
 <footer>
-    <ul class="navbar">
+    <ul class="navbar-mobile">
         <li><svg class="home" x="0px" y="0px" viewBox="0 0 20 20"><g><path d="M20,10c0,5.5-4.5,10-10,10S0,15.5,0,10S4.5,0,10,0S20,4.5,20,10z M10,2.4c-4.2,0-7.6,3.4-7.6,7.6 s3.4,7.6,7.6,7.6s7.6-3.4,7.6-7.6S14.2,2.4,10,2.4z"></path><path d="M8.7,6.9l-5.3,5.3c-0.2-0.7-0.4-1.4-0.4-2.2c0-0.1,0-0.2,0-0.4l4.2-4.2l-1-1l3.4,0l0,3.4L8.7,6.9z M15.6,13.7l0-3.4l-3.4,0l1,1l-5.3,5.3c0.7,0.2,1.4,0.3,2.1,0.3c0.1,0,0.3,0,0.4,0l4.2-4.2L15.6,13.7z M14.5,8.9l0-3.4l-3.4,0l1,1 l-7.7,7.7c0.4,0.5,0.9,1,1.4,1.4l7.6-7.6L14.5,8.9z"></path></g></svg></li>
         <li><svg class="share" x="0px" y="0px" viewBox="0 0 22.9 20.6"><path class="share-mark mark" d="M15.8,18.1H4C4.4,11.9,9.5,7,15.8,7c0.4,0,0.7-0.3,0.7-0.8s-0.3-0.8-0.7-0.8c-6.1,0-11.3,4.2-12.9,9.8V6.2c0-0.4-0.3-0.8-0.8-0.8S1.4,5.8,1.4,6.2v12.6c0,0.4,0.3,0.8,0.8,0.8h13.6c0.4,0,0.7-0.3,0.7-0.8S16.2,18.1,15.8,18.1z M21.2,5.7l-4.5-4.5c-0.3-0.3-0.8-0.3-1.1,0s-0.3,0.8,0,1.1l4,4l-4,4c-0.3,0.3-0.3,0.8,0,1.1c0.1,0.1,0.3,0.2,0.5,0.2c0.2,0,0.4-0.1,0.5-0.2l4.5-4.5C21.5,6.4,21.5,6,21.2,5.7z"></path></svg></li>
         <li><svg class="player" x="0px" y="0px" viewBox="22.7 152.8 566.6 486.4"><path class="headband" d="M481,369.3c10.7,0,21.4-8,21.4-21.4c0-106.9-88.2-195.1-195.1-195.1S109.6,241,109.6,347.9c0,10.7,8,21.4,21.4,21.4c13.4,0,21.4-8,21.4-21.4c0-85.5,69.5-155,155-155s155,69.5,155,155C462.3,358.6,470.4,369.3,481,369.3z"></path><g><path class="button-fg" d="M159,422.7c0-10.7-10.7-18.7-18.7-18.7c-64.1,0-117.6,53.4-117.6,117.6s53.4,117.6,117.6,117.6h24.1l0,0c10.7,0,21.4-8,21.4-21.4c0-2.7,0-5.3,0-8L159,422.7z"></path><path class="button-bg" d="M137.6,599.1c-42.8,0-77.5-34.7-77.5-77.5c0-37.4,26.7-66.8,58.8-74.8L137.6,599.1L137.6,599.1z"></path><path class="button-fg" d="M471.7,404c-10.7,0-18.7,8-18.7,18.7l-26.7,192.4c0,5.3,0,10.7,5.3,16c5.3,5.3,8,8,16,8h24.1c64.1,0,117.6-53.4,117.6-117.6C586.6,457.4,535.8,404,471.7,404z"></path><path class="button-bg" d="M471.7,599.1L471.7,599.1l18.7-152.3c34.7,8,58.8,37.4,58.8,74.8C546.5,564.3,511.8,599.1,471.7,599.1z"></path></g></svg></li>

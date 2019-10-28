@@ -14,13 +14,17 @@
 }
 
 @font-face {
-  font-family: Tiempos Text;
-  src: url(./fonts/TiemposTextTest-Regular.woff);
+  font-family: Tiempos Light;
+  src: url(./fonts/TiemposHeadlineTest-Light.woff);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+html {
+  font-size: 10px;
 }
 
 body {
@@ -29,21 +33,6 @@ body {
   background-color: #f7f7f7;
   margin: 0;
   padding: 0;
-}
-
-.top {
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  background-color: white;
-  width: 100vw;
-  height: 10vh;
-  padding: 4vh 0 3vh 8vw;
-}
-
-main {
-  margin-bottom: 10vh;
 }
 
 header {
@@ -55,6 +44,45 @@ header {
   justify-content: center;
 }
 
+svg.logo {
+  width: 30vw;
+  fill: white;
+}
+
+nav {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  background-color: white;
+  width: 100vw;
+  height: 10vh;
+  padding: 4vh 0 3vh;
+  transition: color .15s;
+  cursor: pointer;
+}
+
+nav>ul {
+  display: flex;
+  align-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.top>li {
+  display: inline;
+  width: 25%;
+}
+
+.top>li:hover {
+  color: orangered;
+}
+
+main {
+  margin-bottom: 10vh;
+}
+
 section {
   width: 100vw;
   display: flex;
@@ -63,46 +91,71 @@ section {
 
 article {
   background-color: white;
+  color: 1A1A1A;
   width: 85vw;
   margin: 4vh 0 3vh 0;
-  padding: 5%;
   box-shadow: 5px 5px 15px whitesmoke;
-}
-
-.logo {
-  width: 30vw;
-  fill: white;
-}
-
-img {
-  display: block;
-  position: relative;
-  right: 5vw;
-  width: 85vw;
-  height: auto;
-  padding: 4vh 0 3vh 0;
 }
 
 h2 {
   text-transform: capitalize;
   font-family: "Tiempos Headline";
+  font-size: 2.8rem;
+  line-height: 1.25;
+  padding: 4% 5% 3%;
+}
+
+img {
+  display: block;
+  position: relative;
+  /* right: 8vw; */
+  width: 85vw;
+  object-fit: cover;
+  height: auto;
+  padding: 1vh 0 3vh 0;
 }
 
 ul.byline {
   list-style: none;
-  padding: 2vh 0 3vh 0;
+  padding: 5%;
   letter-spacing: 0.1em;
   font-weight: 600;
   font-size: 0.8rem;
   text-transform: uppercase;
 }
 
-.byline > li {
+.byline>li {
   display: inline;
 }
 
 li.date {
   color: #b3b3b3;
+}
+
+p {
+  color: #222;
+}
+
+.introduction {
+  font-family: "Walfork";
+  font-size: 1.6rem;
+  line-height: 1.4;
+  padding: 3% 5% 3%;
+}
+
+.content {
+  display: block;
+  padding: 5%;
+  font-family: "Tiempos Light";
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.875;
+  letter-spacing: normal;
+}
+
+.likes {
+  padding: 5%;
+  font-size: 0.8rem;
 }
 
 footer {
@@ -114,7 +167,7 @@ footer {
   border-top: 1px solid #eee;
 }
 
-ul.navbar {
+ul.navbar-mobile {
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -124,7 +177,7 @@ ul.navbar {
   list-style-type: none;
 }
 
-.navbar > li {
+.navbar-mobile>li {
   width: 20%;
   height: 100%;
   text-align: center;
@@ -132,7 +185,7 @@ ul.navbar {
   /* flex-direction: column; */
 }
 
-.navbar > li:nth-child(n + 2) {
+.navbar-mobile>li:nth-child(n + 2) {
   border-left: 1px solid #eee;
 }
 
@@ -144,46 +197,42 @@ ul.navbar {
   width: 5vw;
 }
 
-.content {
-  display: block;
-  font-family: "Tiempos Text";
-  font-weight: 400;
-  font-size: 0.9rem;
-  line-height: 1.88889;
-}
-
-.likes {
-  padding: 3vh 0 0 0;
-  font-size: 0.8rem;
+@media only screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 600px) {
+
   header {
     height: 20vh;
     padding-top: 7vh;
     background-color: white;
   }
 
-  img {
-    width: 50vw;
-    height: auto;
-  }
-
-  .logo {
-    width: 15vw;
+  svg.logo {
+    width: 20vw;
     fill: black;
   }
-}
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {
-  header {
-    height: 5vh;
-    padding-top: 5vh;
+  article {
+    width: 60vw;
+  }
+
+  h2 {
+    font-size: 4rem;
   }
 
   img {
-    width: 200px;
+    width: 60vw;
     height: auto;
   }
-} */
+
+  /* .content {
+    font-size: 1rem;
+  } */
+
+  ul.navbar-mobile {
+    display: none;
+  }

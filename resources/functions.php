@@ -16,6 +16,17 @@ function sortArticlesByDate(array $todaysDate, array $datePublished): int
     return strtotime($datePublished['date']) - strtotime($todaysDate['date']);
 }
 
+/**
+ * Returns a given string of lorem ipsum with line breaks
+ *
+ * @param string $loremIpsum
+ * @return string
+ */
+function contentWithLineBreak(string $loremIpsum): string
+{
+    return nl2br($loremIpsum);
+}
+
 
 // function getArticleByline() {
 

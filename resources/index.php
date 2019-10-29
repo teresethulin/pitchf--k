@@ -56,7 +56,7 @@ usort($articles, "sortArticlesByDate");
         <article>
             <h2><?php echo $article['title']; ?></h2>
             <p class="introduction"><?php echo ($article['introduction']); ?></p>
-            <img src="<?php echo $article['image']; ?>" alt="<?php echo $article['title']; ?>" />
+            <img src="<?php echo $article['image']; ?>" loading="lazy" alt="<?php echo $article['title']; ?>" />
             <ul class="byline"><li class="author">By: <?php echo $article['name']; ?></li>
             <li class="date">/ <?php echo $article['date']; ?></li></ul>
             <div class="content">

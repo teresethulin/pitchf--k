@@ -11,7 +11,9 @@
 
 
 ## Description
-**Pitchfk** - a newsfeed site with fake music news. Created with php, html, css.
+**Pitchfk** - a newsfeed site with fake music news.
+
+Created with PHP, HTML, CSS.
 
 School assignment at [Yrgo](https://yrgo.se/) Web Development program.
 
@@ -21,7 +23,11 @@ School assignment at [Yrgo](https://yrgo.se/) Web Development program.
 
     `git clone https://github.com/teresethulin/plain-news.git`
     
-2. Open index.php in your browser through a local server, ex localhost:8888.
+2. Start a local server in the root project folder in the command line
+
+    `php -S localhost:8888`
+
+3. Open index.php in your browser.
     
     
 ## Testers

@@ -17,11 +17,11 @@ School assignment at [Yrgo](https://yrgo.se/) Web Development program.
 
 
 ## Installation
-1. Clone the directory  
-    ``
-    git clone https://github.com/teresethulin/plain-news.git
-    ```
-2. Open index.php in your local server, ex localhost:8888.
+1. Clone [this directory](https://github.com/teresethulin/plain-news.git) with Github Desktop or bash
+
+    `git clone https://github.com/teresethulin/plain-news.git`
+    
+2. Open index.php in your browser through a local server, ex localhost:8888.
     
     
 ## Testers

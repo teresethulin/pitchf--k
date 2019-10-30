@@ -18,12 +18,15 @@ Created with PHP, HTML, CSS.
 School assignment at [Yrgo](https://yrgo.se/) Web Development program.
 
 
+## Prerequisites
+PHP 7.3.11 installed
+
 ## Installation
 1. Clone [this directory](https://github.com/teresethulin/plain-news.git) with Github Desktop or bash
 
     `git clone https://github.com/teresethulin/plain-news.git`
     
-2. Start a local server in the root project folder in the command line
+2. Start a local server in the resources folder in the command line
 
     `php -S localhost:8888`
 
@@ -32,8 +35,8 @@ School assignment at [Yrgo](https://yrgo.se/) Web Development program.
     
 ## Testers
 - Maja Alin
-- Julia Karlsson
 - Victor Ljungblad
+- Ossian Boren
 
 ## License
 This project is licensed under the [MIT License](../plain-news/LICENSE)

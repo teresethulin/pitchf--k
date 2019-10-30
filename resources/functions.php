@@ -26,24 +26,3 @@ function contentWithLineBreak(string $loremIpsum): string
 {
     return nl2br($loremIpsum);
 }
-
-
-// function getArticleByline() {
-
-// }
-
-// function getTitle() {
-
-// }
-
-// function getContent {
-
-// }
-
-// function getPublishedDate {
-
-// }
-
-// function getArticleImage {
-
-// }

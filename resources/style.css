@@ -115,6 +115,13 @@ img {
   padding: 1vh 0 3vh 0;
 }
 
+.introduction {
+  font-family: "Walfork";
+  font-size: 1.6rem;
+  line-height: 1.4;
+  padding: 3% 5% 3%;
+}
+
 ul.byline {
   list-style: none;
   padding: 5%;
@@ -136,13 +143,6 @@ p {
   color: #222;
 }
 
-.introduction {
-  font-family: "Walfork";
-  font-size: 1.6rem;
-  line-height: 1.4;
-  padding: 3% 5% 3%;
-}
-
 .content {
   display: block;
   padding: 5%;
@@ -155,7 +155,7 @@ p {
 
 .likes {
   padding: 5%;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 footer {
@@ -190,6 +190,7 @@ ul.navbar-mobile {
   border-left: 1px solid #eee;
 }
 
+/* svg icons in mobile footer menu */
 .home,
 .share,
 .player,
@@ -198,9 +199,11 @@ ul.navbar-mobile {
   width: 5vw;
 }
 
-/* @media only screen and (max-width: 600px) {} */
+@media only screen and (min-width: 768px) {
 
-@media only screen and (min-width: 600px) {
+  html {
+    font-size: 16px;
+  }
 
   header {
     height: 20vh;
@@ -218,7 +221,7 @@ ul.navbar-mobile {
   }
 
   h2 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   img {
